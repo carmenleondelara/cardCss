@@ -1,0 +1,95 @@
+:root {
+  --primary-font: 'Kumbh Sans', sans-serif;
+  --dark-cyan: hsl(185, 75%, 39%);
+  --gris-oscuro: hsl(229, 23%, 23%);
+  --dark-grayish-blue: hsl(227, 10%, 46%);
+  --very-light-blue: #6B7082;
+  --light-gray: #E8E9EC;
+  --blanco: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+html {
+  background-color: rgb(17, 103, 110);
+}
+body { 
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+html::after,
+html::before {
+  content: "";
+  display: block;
+  width: 300px;
+  height: 300px;
+  background-color:rgb(25, 162, 174);
+  position: absolute;
+  border-radius: 50%;
+}
+html::before {
+  top: -100px;
+  left: -100px;
+}
+html::after {
+  bottom: -100px;
+  right: -100px;
+}
+.card {
+  width: 300px;
+  height: 350px;
+  background-color:var(--blanco);
+  border-radius: 20px;
+  overflow: hidden;
+}
+.card__header {
+  position: relative;
+  height: 115px;
+  background-color:var(--light-gray);
+  background-image: url('./../assets/images/bg-pattern-card.svg');
+}
+.card__image {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  border-radius: 50%;
+  border: 3px solid var(--light-gray);
+}
+.card__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding-top: 10px;
+  height: 135px;
+}
+.card__text {
+  margin: 0;
+  line-height: 1.5;
+}
+.card__text--light {
+  color: var(--gris-oscuro);
+}
+.card__footer {
+  display: flex;
+  justify-content: space-between;
+  border-top: 2px solid var(--very-light-blue);
+}
+.card__stats {
+  text-align: center;
+  width: 100%;
+}
+.card__number {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  line-height: 2;
+}
+
